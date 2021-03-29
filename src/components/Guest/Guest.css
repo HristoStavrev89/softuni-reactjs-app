@@ -1,0 +1,14 @@
+.imgContainer {
+    background-image: url('./silver_rim.jpg');
+    opacity: 0.75;
+
+    
+}
+
+h1 {
+    color: white;
+}
+
+#root > div {
+    max-width: 1600px;
+}

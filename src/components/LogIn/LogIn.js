@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
-import { useAuth } from '../contexts/AuthContext';
+// import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import './LogIn.css'
 
 export default function LogIn() {
 
@@ -31,7 +33,7 @@ export default function LogIn() {
     return (
         <>
 
-            <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
+            <Container className="d-flex align-items-center justify-content-center containerImg" style={{ minHeight: "100vh" }}>
                 <div className="w-100" style={{ maxWidth: "400px" }} >
 
 
