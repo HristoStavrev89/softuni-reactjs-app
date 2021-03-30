@@ -7,7 +7,7 @@ import { Switch, Route } from 'react-router-dom';
 import Dashboard from './Dashboard'
 import PrivateRoute from './PrivateRoute';
 import Navigation from "./Header/Navigation";
-import Testpage from './Testpage'
+import OffersPage from './OffersPage'
 import AddPost from "./AddPost/AddPost";
 import Footer from "./Footer/Footer";
 import Guest from "./Guest/Guest";
@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/signup" component={SignUp} />
           <Route path="/login" component={LogIn} />
           <Route path="/addpost" component={AddPost} />
-          <Route path="/testpage" component={Testpage} />
+          <Route path="/offers" component={OffersPage} />
         </Switch>
       </AuthProvider>
       <Footer/>

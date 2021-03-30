@@ -46,14 +46,13 @@ export default function Navigation() {
                                 ) : (
                                     // Navigation links for guests
                                     <>
-                                        <li class="nav-item"><Link class="nav-link" to="/testpage">Gallery</Link></li>
+                                        <li class="nav-item"><Link class="nav-link" to="/offers">Offers</Link></li>
                                         <li class="nav-item"><Link class="nav-link" to="/index">Index</Link></li>
                                         <li class="nav-item"><Link class="nav-link" to="/signup">Sign Up</Link></li>
                                         <li class="nav-item"><Link class="nav-link" to="/login">Log In</Link></li>
                                     </>
                                 )
                             }
-
                         </ul>
                     </div>
                 </div>
