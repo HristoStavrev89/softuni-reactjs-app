@@ -6,8 +6,10 @@ export default function Guest() {
     return (
         <>
             <Container className="d-flex align-items-center justify-content-center imgContainer" style={{ minHeight: "90vh"}}>
-                <div className="w-100" style={{ maxWidth: "400px" }} >
-                    <h1>This is Guests Page</h1>
+                <div className="w-100 wrapper" >
+                    <h1>Welcome to <span>AutoManiacs</span></h1>
+                    <p>- да добавя кратко въведение в сайта</p>
+                    <p>- да се показват обявите?</p>
                 </div>
             </Container>
         </>
