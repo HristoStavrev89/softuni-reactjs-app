@@ -1,13 +1,13 @@
 import React from "react";
 import LogIn from "./LogIn/LogIn";
-import SignUp from "./SignUp";
+import SignUp from "./SignUp/SignUp";
 
 import { AuthProvider } from '../contexts/AuthContext'
 import { Switch, Route } from 'react-router-dom';
-import Dashboard from './Dashboard'
+import Dashboard from './Dashboard/Dashboard'
 import PrivateRoute from './PrivateRoute';
 import Navigation from "./Header/Navigation";
-import OffersPage from './OffersPage'
+import OffersPage from './OffersPage/OffersPage'
 import AddPost from "./AddPost/AddPost";
 import Footer from "./Footer/Footer";
 import Guest from "./Guest/Guest";

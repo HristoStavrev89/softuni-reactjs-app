@@ -1,4 +1,27 @@
 .containerImg {
     background-image: url('./wp1910226-engines-wallpapers.jpg');
-    opacity: 0.78;
+    min-height: 87vh;
+}
+
+.content-wrapper {
+    background-color: white;
+    opacity: 0.94;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    min-height: 645px;
+    border-radius: 12px;
+}
+
+.submitBtn {
+    background-color: yellowgreen;
+    margin-top: 20px;
+    width: 100px;
+    border-radius: 8px;
+    border:  none;
+}
+
+button:hover {
+    border: 2px solid rgb(85, 109, 85);
 }
