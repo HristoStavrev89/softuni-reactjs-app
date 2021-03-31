@@ -26,7 +26,12 @@ export default function Dashboard() {
 
 
         <div className="content-wrapper-home" >
-            <h1>Welcome <span>{currentUser.email}</span></h1>
+            <h1 className="title" >Your offers</h1>
+
+            <div className="cards-wrapper">
+                
+            </div>
+
         </div>
 
 

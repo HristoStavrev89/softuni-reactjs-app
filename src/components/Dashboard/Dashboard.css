@@ -1,8 +1,12 @@
 .content-wrapper-home {
     min-height: 86.65vh;
-    background-color: rgb(182, 182, 182);
+    /* background-color: rgb(136, 102, 102); */
+    background-image: url('./teahub.io-close-up-wallpaper-2892495\ \(1\).png');
+    margin: 0 auto;
 }
 
-h1 {
+.title {
     padding-top: 100px;
+    text-align: center;
+    color: white;
 }

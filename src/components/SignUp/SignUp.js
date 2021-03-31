@@ -3,6 +3,7 @@ import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from '../../contexts/AuthContext';
 import { Link, useHistory } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import './SignUp.css'
 
 export default function SignUp() {
 
@@ -36,7 +37,7 @@ export default function SignUp() {
     return (
         <>
 
-            <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
+            <Container className="d-flex align-items-center justify-content-center container-sign-up">
                 <div className="w-100" style={{ maxWidth: "400px" }} >
 
 
@@ -62,7 +63,7 @@ export default function SignUp() {
                             </Form>
                         </Card.Body>
                     </Card>
-                    <div className="w-100 text-center mt-2" >
+                    <div className="w-100 text-center mt-2 already-account" >
                         Already have an account? <Link to="/login" >Log In</Link>
                     </div>
 

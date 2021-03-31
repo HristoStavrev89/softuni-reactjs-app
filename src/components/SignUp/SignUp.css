@@ -1,0 +1,10 @@
+.container-sign-up {
+    background-color: violet;
+    min-height: 86.65vh;
+    background-image: url('./audi\ resize.jpg');
+}
+
+.already-account {
+    font-size: 20px;
+    color: white;
+}
