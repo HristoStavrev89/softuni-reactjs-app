@@ -2,8 +2,9 @@
 
 
 
-.imgContainer {
+.imgContainer-guest {
     background-image: url('../Dashboard/teahub.io-close-up-wallpaper-2892495 (1).png');
+    min-height: 86.65vh;
 }
 
 .wrapper {

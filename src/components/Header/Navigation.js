@@ -23,13 +23,10 @@ export default function Navigation() {
         }
     }
 
-
-
-
     return (
         <>
             <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
-                <div class="container"><a class="navbar-brand" href="#page-top" >Car Seller</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                <div class="container"><a class="navbar-brand" href="#page-top" >Auto Nation</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav ml-auto text-uppercase">
 

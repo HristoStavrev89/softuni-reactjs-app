@@ -15,6 +15,7 @@ export default function AddPost() {
     const [error, setError] = useState();
     const [loading, setLoading] = useState();
 
+    const titleRef = useRef();
     const brandRef = useRef();
     const modelRef = useRef();
     const yearRef = useRef();
@@ -25,6 +26,7 @@ export default function AddPost() {
      function handleSubmit(e) {
         e.preventDefault();
         
+        const title = titleRef.current.value;
         const brand = brandRef.current.value;
         const model = modelRef.current.value;
         const year = yearRef.current.value;
@@ -37,6 +39,7 @@ export default function AddPost() {
             setLoading(true);
 
             db.collection('cars').add({
+                title,
                 brand,
                 model,
                 year,
@@ -67,6 +70,11 @@ export default function AddPost() {
                     <form onSubmit={handleSubmit}>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Title</span>
+                        <input type="text" class="form-control" placeholder="Add Title" aria-label="Username" aria-describedby="basic-addon1" required ref={titleRef} />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Brand</span>
                         <input type="text" class="form-control" placeholder="Add Title" aria-label="Username" aria-describedby="basic-addon1" required ref={brandRef} />
                     </div>
 
