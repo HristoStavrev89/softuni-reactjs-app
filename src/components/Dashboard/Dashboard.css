@@ -1,8 +1,14 @@
 .content-wrapper-home {
+    display: flex;
+    flex-direction: column;
     min-height: 86.65vh;
     /* background-color: rgb(136, 102, 102); */
     background-image: url('./teahub.io-close-up-wallpaper-2892495\ \(1\).png');
     margin: 0 auto;
+}
+
+.my-offers-wrapper {
+    display: flex;
 }
 
 .title {
@@ -10,3 +16,4 @@
     text-align: center;
     color: white;
 }
+

@@ -1,25 +1,36 @@
-import React, { useState } from 'react';
-import { Card, Button, Alert, Container } from 'react-bootstrap';
-import { useAuth } from '../../contexts/AuthContext';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import './Dashboard.css'
+import { db } from '../../firebase';
+import Offer from '../Offer/Offer';
+import { useAuth } from '../../contexts/AuthContext'
 
 export default function Dashboard() {
 
-    const [ error, setError ] = useState("");
-    const { currentUser, logout } = useAuth();
-    const history = useHistory();
+    // Only offers added from the current user
+    const [offers, setOffers] = useState();
 
-   async function handleLogout() {
-        setError("");
+    const { currentUser } = useAuth();
 
-        try {
-            await logout();
-            history.push("/login")
-        } catch {
-            setError("Failed to log out")
-        }
-    }
+    console.log(currentUser.uid);
+
+    useEffect(() => {
+        db.collection("cars")
+            .get()
+            .then(snapshot => {
+                const cars = [];
+                snapshot.forEach(doc => {
+                    
+                    const data = doc.data();
+
+                    const currentUserOffers = currentUser.uid === data.creator;
+                    if (currentUserOffers) {
+                        cars.push(data);
+                    }
+                    
+                })
+                setOffers(cars)
+            })
+    }, [])
 
 
     return (
@@ -28,7 +39,21 @@ export default function Dashboard() {
         <div className="content-wrapper-home" >
             <h1 className="title" >Your offers</h1>
 
-            <div className="cards-wrapper">
+            <div className="my-offers-wrapper">
+
+            {                       
+                      offers && offers.map(offer =>
+                            <Offer
+                                image={offer.imgUrl}
+                                title={offer.title}
+                                brand={offer.brand}
+                                model={offer.model}
+                                year={offer.year}
+                                price={offer.price}
+                                description={offer.description}
+                            />
+                        )
+                    }
                 
             </div>
 
