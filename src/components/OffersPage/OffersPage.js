@@ -27,9 +27,8 @@ export default function Offers() {
             <Container className="d-flex align-items-center justify-content-center offers-container">
                 <h1 className="container-title">All offers</h1>
                 <div className="offers-wrapper" >
-
-                    {
-                        offers.map(offer =>
+                    {                       
+                      offers && offers.map(offer =>
                             <Offer
                                 image={offer.imgUrl}
                                 title={offer.title}
@@ -41,7 +40,6 @@ export default function Offers() {
                             />
                         )
                     }
-
                 </div>
             </Container>
         </>
