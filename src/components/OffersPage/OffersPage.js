@@ -1,32 +1,46 @@
-import React from 'react'
+
+import React, { useState, useEffect } from 'react'
 import { Container } from 'react-bootstrap';
+import { db } from '../../firebase';
 import Offer from '../Offer/Offer';
 import './OffersPage.css'
 
 export default function Offers() {
 
+    const [offers, setOffers] = useState();
 
-    
+    useEffect(() => {
+        db.collection("cars")
+            .get()
+            .then(snapshot => {
+                const cars = [];
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    cars.push(data);
+                })
+                setOffers(cars)
+            })
+    }, [])
 
     return (
         <>
             <Container className="d-flex align-items-center justify-content-center offers-container">
-            <h1 className="container-title">All offers</h1>
+                <h1 className="container-title">All offers</h1>
                 <div className="offers-wrapper" >
-                    
-                    {/* Component offer test */}
-                    <Offer
-                    image="https://upload.wikimedia.org/wikipedia/commons/9/9b/Audi_A4_B9_Limousine_3.0_TDI_quattro.JPG"
-                    title="Super offer"
-                    brand="Audi"
-                    model="A4"
-                    year="2016"
-                    price="15000"
-                    description="Some description"
-                    />
 
-                    
-
+                    {
+                        offers.map(offer =>
+                            <Offer
+                                image={offer.imgUrl}
+                                title={offer.title}
+                                brand={offer.brand}
+                                model={offer.model}
+                                year={offer.year}
+                                price={offer.price}
+                                description={offer.description}
+                            />
+                        )
+                    }
 
                 </div>
             </Container>
