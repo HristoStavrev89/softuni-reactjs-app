@@ -1,7 +1,8 @@
 import React from 'react'
 import './Offer.css'
+import { Link } from 'react-router-dom'
 
-export default function Offer({image, title, brand, model, year, description, price}) {
+export default function Offer({image, title, brand, model, year, description, price, offerId}) {
     return (
 
         <section className="offer">
@@ -15,7 +16,8 @@ export default function Offer({image, title, brand, model, year, description, pr
                 <p className="offer-year">{year}</p>
                 <p className="offer-description">{description}</p>
                 <p className="offer-price">{price} Euro</p>
-                <button className="offer-btn">More</button>
+                {/* <button className="offer-btn">More</button> */}
+                <Link type="button" to={`/offers/details/${offerId}`}>More</Link>
             </div>
         </section>
 

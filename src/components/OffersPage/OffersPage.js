@@ -16,11 +16,15 @@ export default function Offers() {
                 const cars = [];
                 snapshot.forEach(doc => {
                     const data = doc.data();
-                    cars.push(data);
+                    
+                    cars.push({id: doc.id, ...data});
                 })
                 setOffers(cars)
             })
     }, [])
+
+    
+    
 
     return (
         <>
@@ -37,6 +41,7 @@ export default function Offers() {
                                 year={offer.year}
                                 price={offer.price}
                                 description={offer.description}
+                                offerId={offer.id}
                             />
                         )
                     }

@@ -36,8 +36,7 @@ export default function Navigation() {
                                     <>
                                         <li class="nav-item"><Link class="nav-link">Hello: {currentUser.email}</Link></li>
                                         <li class="nav-item"><Link class="nav-link" to="/addpost">Add Post</Link></li>
-                                        <li class="nav-item"><Link class="nav-link" to="/">Home</Link></li>
-                                        <li class="nav-item"><Link class="nav-link" to="/testpage">Gallery</Link></li>
+                                        <li class="nav-item"><Link class="nav-link" to="/">Home</Link></li>                                      
                                         <Button variant="link" onClick={handleLogout}>Log Out</Button>
                                     </>
                                 ) : (

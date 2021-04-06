@@ -11,7 +11,7 @@ export default function Dashboard() {
 
     const { currentUser } = useAuth();
 
-    console.log(currentUser.uid);
+    
 
     useEffect(() => {
         db.collection("cars")
