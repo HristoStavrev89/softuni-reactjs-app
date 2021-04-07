@@ -11,6 +11,7 @@ import OffersPage from './OffersPage/OffersPage'
 import AddPost from "./AddPost/AddPost";
 import Footer from "./Footer/Footer";
 import Guest from "./Guest/Guest";
+import OfferDetails from "./OfferDetails/OfferDetails";
 
 const App = () => {
   return (
@@ -25,6 +26,8 @@ const App = () => {
           <Route path="/login" component={LogIn} />
           <Route path="/addpost" component={AddPost} />
           <Route path="/offers" component={OffersPage} />
+
+         <Route path="/details/:offerId" children={OfferDetails} />
         </Switch>
       </AuthProvider>
       <Footer/>

@@ -53,8 +53,7 @@ export default function Dashboard() {
                                 description={offer.description}
                             />
                         )
-                    }
-                
+                    }              
             </div>
 
         </div>
