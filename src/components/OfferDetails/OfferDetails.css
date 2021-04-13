@@ -1,3 +1,41 @@
 .test-heading {
     margin-top: 400px;
 }
+
+.details-container {
+    position: relative;
+
+    min-height: 75.20vh;
+    flex-direction: column;
+    margin-top: 78px;
+    margin-bottom: 30px;
+}
+
+.details-title {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.details-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 625px;
+    background-color: honeydew;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.details-wrapper p, h4 {
+    text-align: center;
+}
+
+.edit-form {
+    margin-top: 30px;
+    width: 460px;
+}
+
+.field-input {
+    max-width: 700px;
+}
