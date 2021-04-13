@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/addpost" component={AddPost} />
           <Route path="/offers" component={OffersPage} />
 
-         <Route path="/details/:offerId" children={OfferDetails} />
+         <Route path="/details/:offerId" component={OfferDetails} />
         </Switch>
       </AuthProvider>
       <Footer/>

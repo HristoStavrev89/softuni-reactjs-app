@@ -8,7 +8,7 @@ import './Navigation.css'
 export default function Navigation() {
 
 
-    const [error, setError] = useState("");
+    const [error, setError] = useState();
     const { currentUser, logout } = useAuth();
     const history = useHistory();
 

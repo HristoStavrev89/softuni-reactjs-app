@@ -1,13 +1,10 @@
 
 import React, { useState, useEffect } from 'react'
 import { Container } from 'react-bootstrap';
-import { Route } from 'react-router';
+import { Link } from 'react-router-dom'
 import { db } from '../../firebase';
 import Offer from '../Offer/Offer';
-import OfferDetails from '../OfferDetails/OfferDetails';
 import './OffersPage.css'
-import { Link } from 'react-router-dom'
-import { AuthProvider } from '../../contexts/AuthContext'
 
 export default function Offers() {
 
@@ -46,7 +43,8 @@ export default function Offers() {
                                     price={offer.price}
                                     description={offer.description}
                                     offerId={offer.id}
-                                />                              
+                                />
+                                {/* <Link type="button" to={`/details/${offer.id}`}>More</Link>                            */}
                             </>
                         )
                     }
