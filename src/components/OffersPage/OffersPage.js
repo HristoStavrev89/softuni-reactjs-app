@@ -1,7 +1,5 @@
-
 import React, { useState, useEffect } from 'react'
 import { Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
 import { db } from '../../firebase';
 import Offer from '../Offer/Offer';
 import './OffersPage.css'
@@ -44,7 +42,6 @@ export default function Offers() {
                                     description={offer.description}
                                     offerId={offer.id}
                                 />
-                                {/* <Link type="button" to={`/details/${offer.id}`}>More</Link>                            */}
                             </>
                         )
                     }

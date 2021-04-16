@@ -100,7 +100,7 @@ export default function OfferDetails(props) {
         <>
             { details && (
                 <div className="details-container">
-                    <h1 className="details-title">Details</h1>
+                    <h1 className="details-title">DETAILS</h1>
                     <div className="details-wrapper" >
                         {/* This is just a test    */}
 

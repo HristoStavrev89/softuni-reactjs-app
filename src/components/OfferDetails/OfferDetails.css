@@ -1,19 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 .test-heading {
     margin-top: 400px;
 }
 
-.details-container {
+#root > .details-container {
     position: relative;
-
-    min-height: 75.20vh;
+    background-image: url('../OffersPage/bmw-m4-mk2-pic135238.jpg');
+    min-height: 86.65vh;
     flex-direction: column;
-    margin-top: 78px;
-    margin-bottom: 30px;
+    max-width: 100%;
 }
 
 .details-title {
+    font-family: 'Kaushan Script', cursive;
     text-align: center;
     padding: 10px 0;
+    position: relative;
+    top: 100px;
+    color: #ffffff;
 }
 
 
@@ -21,15 +26,18 @@
     position: relative;
     display: flex;
     justify-content: center;
-    height: 625px;
-    background-color: honeydew;
+    height: 500px;
+    background-color: #000000;
     max-width: 1000px;
     margin: 0 auto;
     border-radius: 12px;
+    top: 130px;
+    opacity: 0.85;
 }
 
 .details-wrapper p, h4 {
     text-align: center;
+    color: white;
 }
 
 .edit-form {
