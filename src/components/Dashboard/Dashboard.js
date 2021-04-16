@@ -24,7 +24,7 @@ export default function Dashboard() {
 
                     const currentUserOffers = currentUser.uid === data.creator;
                     if (currentUserOffers) {
-                        cars.push(data);
+                        cars.push({id: doc.id, ...data});
                     }
                     
                 })
@@ -51,6 +51,7 @@ export default function Dashboard() {
                                 year={offer.year}
                                 price={offer.price}
                                 description={offer.description}
+                                offerId={offer.id}
                             />
                         )
                     }              

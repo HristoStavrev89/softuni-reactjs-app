@@ -36,13 +36,16 @@ export default function Navigation() {
                                     <>
                                         <li class="nav-item"><Link class="nav-link">Hello: {currentUser.email}</Link></li>
                                         <li class="nav-item"><Link class="nav-link" to="/addpost">Add Post</Link></li>
-                                        <li class="nav-item"><Link class="nav-link" to="/">Home</Link></li>                                      
+                                        <li class="nav-item"><Link class="nav-link" to="/">My Offers</Link></li>    
+                                        <li class="nav-item"><Link class="nav-link" to="/offers">All Offers</Link></li>    
                                         <Button variant="link" onClick={handleLogout}>Log Out</Button>
+                                        {/* <li class="nav-item"><button class="nav-link" onClick={handleLogout} >Log Out</button></li> */}
+
                                     </>
                                 ) : (
                                     // Navigation links for guests
                                     <>
-                                        <li class="nav-item"><Link class="nav-link" to="/offers">Offers</Link></li>
+                                        <li class="nav-item"><Link class="nav-link" to="/offers">All Offers</Link></li>
                                         <li class="nav-item"><Link class="nav-link" to="/index">Index</Link></li>
                                         <li class="nav-item"><Link class="nav-link" to="/signup">Sign Up</Link></li>
                                         <li class="nav-item"><Link class="nav-link" to="/login">Log In</Link></li>
