@@ -11,7 +11,7 @@ export default function Dashboard() {
 
     const { currentUser } = useAuth();
 
-    
+
 
     useEffect(() => {
         db.collection("cars")
@@ -19,14 +19,14 @@ export default function Dashboard() {
             .then(snapshot => {
                 const cars = [];
                 snapshot.forEach(doc => {
-                    
+
                     const data = doc.data();
 
                     const currentUserOffers = currentUser.uid === data.creator;
                     if (currentUserOffers) {
-                        cars.push({id: doc.id, ...data});
+                        cars.push({ id: doc.id, ...data });
                     }
-                    
+
                 })
                 setOffers(cars)
             })
@@ -37,24 +37,26 @@ export default function Dashboard() {
 
 
         <div className="content-wrapper-home" >
-            <h1 className="title" >Your offers</h1>
+            <div className="title-wrapper">
+                <h1 className="title" >Your offers</h1>
+            </div>
 
             <div className="my-offers-wrapper">
 
-            {                       
-                      offers && offers.map(offer =>
-                            <Offer
-                                image={offer.imgUrl}
-                                title={offer.title}
-                                brand={offer.brand}
-                                model={offer.model}
-                                year={offer.year}
-                                price={offer.price}
-                                description={offer.description}
-                                offerId={offer.id}
-                            />
-                        )
-                    }              
+                {
+                    offers && offers.map(offer =>
+                        <Offer
+                            image={offer.imgUrl}
+                            title={offer.title}
+                            brand={offer.brand}
+                            model={offer.model}
+                            year={offer.year}
+                            price={offer.price}
+                            description={offer.description}
+                            offerId={offer.id}
+                        />
+                    )
+                }
             </div>
 
         </div>

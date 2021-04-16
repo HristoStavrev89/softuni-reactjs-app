@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+
+
 #root > .content-wrapper-home {
     display: flex;
     flex-direction: column;
@@ -11,8 +15,18 @@
     display: flex;
 }
 
+.title-wrapper {
+    background-color: #000000;
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 12px;
+    opacity: 0.75;
+}
+
 .title {
-    padding-top: 100px;
+    font-family: 'Kaushan Script', cursive;
+    
     text-align: center;
     color: white;
 }
