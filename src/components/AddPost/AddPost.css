@@ -1,6 +1,7 @@
-.containerImg {
+#root > .containerImg {
     background-image: url('./wp1910226-engines-wallpapers.jpg');
-    min-height: 87vh;
+    max-width: 100%;
+    min-height: 86.65vh;
 }
 
 .content-wrapper {

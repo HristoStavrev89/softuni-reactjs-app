@@ -1,7 +1,7 @@
-.container-sign-up {
-    background-color: violet;
+#root > .container-sign-up {
     min-height: 86.65vh;
-    background-image: url('./audi\ resize.jpg');
+    background-image: url('./2019_audi_a6_43_1920x1080.jpg');
+    max-width: 100%;
 }
 
 .already-account {

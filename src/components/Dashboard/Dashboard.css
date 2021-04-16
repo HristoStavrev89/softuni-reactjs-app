@@ -1,9 +1,9 @@
-.content-wrapper-home {
+#root > .content-wrapper-home {
     display: flex;
     flex-direction: column;
     min-height: 86.65vh;
-    /* background-color: rgb(136, 102, 102); */
-    background-image: url('./teahub.io-close-up-wallpaper-2892495\ \(1\).png');
+    background-image: url('../LogIn/rear_lights-wallpaper-1920x1080.jpg');
+    max-width: 100%;
     margin: 0 auto;
 }
 

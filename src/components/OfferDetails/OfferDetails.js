@@ -27,8 +27,10 @@ export default function OfferDetails(props) {
             .then(response => {
 
                 const currentOffer = response.data();
-                if (currentUser.uid == currentOffer.creator) {
-                    setCreator(true)
+                if (currentUser) {
+                    if (currentUser.uid == currentOffer.creator) {
+                        setCreator(true)
+                    }
                 }
                 setDetails(currentOffer)
             })

@@ -1,6 +1,7 @@
-.container-login {
-    background-image: url('./2019_bugatti_divo_resize.jpg');
+#root > .container-login {
+    background-image: url('./rear_lights-wallpaper-1920x1080.jpg');
     min-height: 86.65vh;
+    max-width: 100%;
 }
 
 .account-need {
