@@ -21,3 +21,17 @@
 
 
 
+.offers-wrapper {
+    position: absolute;
+    top: 120px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 12px;
+    width: 90%;
+    max-width: "400px";
+    text-align: center;
+}
+

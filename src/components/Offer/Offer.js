@@ -18,16 +18,13 @@ export default function Offer({image, title, brand, model, year, description, pr
             </div>
             <div className="offer-content">
                 <h5 className="offer-title">{title}</h5>
-                <h5 className="offer-brand">{brand}</h5>
-                <h5 className="offer-model">{model}</h5>
-                <p className="offer-year">{year}</p>
-                <p className="offer-description">{description}</p>
-                <p className="offer-price">{price} Euro</p>
-                
-                <Link type="button" to={`/details/${offerId}`}>More</Link>               
+                <p className="offer-brand"><span>Brand:&nbsp; </span> {brand}</p>
+                <p className="offer-model"><span>Model: </span>{model}</p>
+                <p className="offer-year"><span>Year:&nbsp;&nbsp; &nbsp;&nbsp;</span>{year}</p>
+                <p className="offer-price"><span>Price:&nbsp; &nbsp;</span>{price} Euro</p>         
             </div>
             
-                
+            <Link className="more-btn" type="button" to={`/details/${offerId}`}>More</Link> 
             
         </section>
 

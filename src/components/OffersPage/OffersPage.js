@@ -27,8 +27,9 @@ export default function Offers() {
     return (
         <>
             <Container className="d-flex align-items-center justify-content-center offers-container">
-                <h1 className="container-title">All offers</h1>
+                
                 <div className="offers-wrapper" >
+                
                     {
                         offers && offers.map(offer =>
                             <>

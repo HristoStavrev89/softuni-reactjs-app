@@ -9,7 +9,7 @@ import './OfferDetails.css'
 
 export default function OfferDetails(props) {
 
-    // comparison current uid with offer.creator to show delete button and edit content
+    
 
     const [details, setDetails] = useState();
     const [creator, setCreator] = useState(false);
